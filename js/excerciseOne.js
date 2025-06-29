@@ -2,12 +2,12 @@
 const car = {
   price: 2000000,
   model: 2020,
-  brand: "honda",
+  brand: "Honda Civic",
   motor: "2.4l",
   transmision: "Automatic CVT",
   //métodos:
   turnOn: function (){
-    document.writeln(`<h1 class="text-success">Car ready! brrr brbr!!<br></h1>`)
+    document.writeln(`<h1 class="text-success">Car ready!🔥 brrr brbr!!🔥<br></h1>`)
   },
   turnOff: function(){
     document.writeln(`<h2 class="text-danger">Turn off the ship!</h2>`)
@@ -15,10 +15,12 @@ const car = {
 };
 // modify key and value to object:
 car.frenos= 'Disc Brackets';
+car.color = 'champagne';
 
 // call class object
 car.turnOn();
 car.turnOff();
 console.log(car.turnOn());
-document.writeln(`<h3 class="text-primary">The better disc brackets for cars is:  ${car.frenos}</h3> `)
+document.querySelector('.car-champagne').innerHTML=`<h3 class="text-primary"><i class="bi bi-car-front-fill text-danger fs-1"></i> The better disc brackets for cars is: <span class='text-secondary'>${car.frenos}</span>, and the most beatiful color is the <span class="car-champagne">${car.color}</span></h3> `
+
 
