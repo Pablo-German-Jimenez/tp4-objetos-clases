@@ -9,13 +9,58 @@ Utiliza este objeto para mostrar la descripción, ingresar y extraer dinero y vo
 
 Rectángulos*/
 
-const account = {
-    titular: 'Alex',
+/*const cuenta = {
+    titular: "Alex",
     saldo: 0,
-    ingresar:function(){
-        document.querySelector
+    ingresar(cantidad) {
+        this.saldo += cantidad;
     },
-    extraer: function(){},
-    informar:function(){}, 
+    extraer(cantidad) {
+        this.saldo -= cantidad;
+    },
+    informar() {
+        document.writeln( `Titular: ${this.titular}, Saldo: $${this.saldo}`);
+    }
+};
+
+// Uso del objeto
+console.log(cuenta.informar()); // Muestra: Titular: Alex, Saldo: $0
+cuenta.ingresar(500);
+console.log(cuenta.informar()); // Muestra: Titular: Alex, Saldo: $500
+cuenta.extraer(150);
+console.log(cuenta.informar()); // Muestra: Titular: Alex, Saldo: $350*/
+const saldo = document.querySelector('.saldo');
+const cantidad = [];
+
+const account = {
+    Titulo: 'Alex',
+    saldo: 0,
+    ingresar: function(cantidad){
+        cantidad = parseInt(prompt(`cuanto depositar?`))
+        console.log((typeof(cantidad)))
+        if(!isNaN(cantidad)){
+        this.saldo =+ this.saldo+cantidad;
+        saldo.innerHTML = ` Su saldo es: ${this.saldo}`
+        }
+    },
+    extraer: function(cantidad){
+        cantidad = parseInt(prompt(`Cuanto dinero quieres extraer?`))
+        this.saldo= this.saldo-cantidad
+        console.log(`El importe actual de tu saldo es de ${this.saldo}`)
+
+    },
+    informar: function(cantidad){
+        alert(`EL valor total es de ${this.cantidad}`)
+
+
+    },
 }
 
+
+do{
+account.ingresar()
+}while(confirm(`Add more numbers?`))
+
+account.extraer()
+
+account.informar()
