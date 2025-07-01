@@ -1,3 +1,19 @@
-.car-champagne{
-    color:rgb(146, 127, 75)
+body {
+  background-color: #f0f2f5;
+}
+.cajero {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#info {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.car-champagne {
+  color: rgb(146, 127, 75);
 }

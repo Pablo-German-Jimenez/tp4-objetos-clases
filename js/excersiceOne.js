@@ -21,6 +21,6 @@ car.color = 'champagne';
 car.turnOn();
 car.turnOff();
 console.log(car.turnOn());
-document.querySelector('.car-champagne').innerHTML=`<h3 class="text-primary"><i class="bi bi-car-front-fill text-danger fs-1"></i> The better disc brackets for cars is: <span class='text-secondary'>${car.frenos}</span>, and the most beatiful color is the <span class="car-champagne">${car.color}</span></h3> `
+document.querySelector('.car-champagne').innerHTML=`<h3 class="text-primary"><i class="bi bi-car-front-fill text-danger fs-1"></i> The better car brake for cars is: <span class='text-secondary'>${car.frenos}</span>, and the most beatiful color is the <span class="car-champagne">${car.color}</span></h3> `
 
 
