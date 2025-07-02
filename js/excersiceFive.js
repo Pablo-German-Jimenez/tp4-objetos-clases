@@ -9,97 +9,78 @@ Para realizar este método tener en cuenta la siguiente tabla de generaciones:
 esMayorDeEdad: indica si es mayor de edad, devuelve un mensaje indicando que la persona es mayor de edad.
 mostrarDatos: devuelve toda la información del objeto.
 generaDNI(): genera un número aleatorio de 8 cifras.
-
-
-class Persona{
-    constructor(nombre,edad,DNI,sexo,peso,altura,anioNacimiento){
-        this.nombre=nombre;
-        this.edad=edad;
-        this.DNI=DNI;
-        this.sexo=sexo;
-        this.peso=peso;
-        this.altura=altura;
-        this.anioNacimiento=anioNacimiento;
-    }
-    mostrarGeneracion(){
-        
-        if(this.edad>=1930&&this.edad<=1948){
-            console.log(`${this.name} pertenece a los Silent Generation, con rasgos de Austeridad`)
-        }else if(this.edad>=1949&&this.edad<=1968){
-            console.log(`${this.name} pertenece a los Baby Boom, con rasgos de Ambisión!`)
-        }else if(this.edad>=1969&&this.edad<=1980){
-            console.log(`${this.nombre} pertenece a la Generación X, con rasgos de obsesión por el éxito`)
-        }
-    }
-    esMayorDeEdad(){}
-    mostrarDatos(){}
-    generaDNI(){}
-
-
-};
-
-const Bboy = new Persona('german',,132105,'masculino')
-console.log(Bboy.mostrarGeneracion());
-
 */
 
-class Persona {
-  constructor(nombre, edad, sexo, peso, altura, anioNacimiento) {
-    this.nombre = nombre;
-    this.edad = edad;
-    this.dni = this.generaDNI();
-    this.sexo = sexo;
-    this.peso = peso;
-    this.altura = altura;
-    this.anioNacimiento = anioNacimiento;
+
+
+
+class Person {
+
+  constructor(name, age, id, gender, height, weight, birthYear) {
+    this.name = name;
+    this.age = age;
+    this.id = id;
+    this.gender = gender;
+    this.height = height;
+    this.weight = weight;
+    this.birthYear = birthYear;
   }
 
-  mostrarGeneracion() {
-    let generacion, rasgo;
+  showGeneration() {
+    let generation, trait;
 
-    if (this.anioNacimiento >= 1930 && this.anioNacimiento <= 1948) {
-      generacion = "Silent Generation";
-      rasgo = "austeridad";
-    } else if (this.anioNacimiento >= 1949 && this.anioNacimiento <= 1968) {
-      generacion = "Baby Boom";
-      rasgo = "ambición";
-    } else if (this.anioNacimiento >= 1969 && this.anioNacimiento <= 1980) {
-      generacion = "Generación X";
-      rasgo = "obsesión por el éxito";
-    } else if (this.anioNacimiento >= 1981 && this.anioNacimiento <= 1993) {
-      generacion = "Millennials";
-      rasgo = "frustración";
-    } else if (this.anioNacimiento >= 1994 && this.anioNacimiento <= 2010) {
-      generacion = "Generación Z";
-      rasgo = "irreverencia";
+    if (this.birthYear >= 1930 && this.birthYear <= 1948) {
+      generation = "Silent Generation";
+      trait = "austerity";
+    } else if (this.birthYear >= 1949 && this.birthYear <= 1968) {
+      generation = "Baby Boom";
+      trait = "ambition";
+    } else if (this.birthYear >= 1969 && this.birthYear <= 1980) {
+      generation = "Generation X";
+      trait = "obsession with success";
+    } else if (this.birthYear >= 1981 && this.birthYear <= 1993) {
+      generation = "Millennials";
+      trait = "frustration";
+    } else if (this.birthYear >= 1994 && this.birthYear <= 2010) {
+      generation = "Generation Z";
+      trait = "irreverence";
     } else {
-      generacion = "Desconocida";
-      rasgo = "N/A";
+      generation = "Unknown";
+      trait = "N/A";
     }
 
-   return  console.log(`${this.nombre} pertenece a la ${generacion}, cuyo rasgo característico es la ${rasgo}.`);
+    return document.writeln(
+      `<h1 class='text-danger'>${this.name} belongs to the ${generation}, characterized by ${trait}.</h1>`
+    );
   }
 
-  esMayorDeEdad() {
-   return console.log(`${this.nombre} ${this.edad >= 18 ? "es mayor de edad" : "no es mayor de edad"}.`);
+  isOfLegalAge() {
+    return document.writeln(
+      `<h2 class='text-success'>${this.name} is ${this.age >= 18 ? "an adult" : "a minor"}.</h2>`
+    );
   }
 
-  mostrarDatos() {
-    console.log(`Nombre: ${this.nombre}`);
-    console.log(`Edad: ${this.edad}`);
-    console.log(`DNI: ${this.dni}`);
-    console.log(`Sexo: ${this.sexo}`);
-    console.log(`Peso: ${this.peso} kg`);
-    console.log(`Altura: ${this.altura} m`);
-    console.log(`Año de nacimiento: ${this.anioNacimiento}`);
+  showData() {
+    console.log(`Name: ${this.name}`);
+    console.log(`Age: ${this.age}`);
+    console.log(`ID: ${this.id}`);
+    console.log(`Gender: ${this.gender}`);
+    console.log(`Height: ${this.height}`);
+    console.log(`Weight: ${this.weight}`);
+    console.log(`Year of Birth: ${this.birthYear}`);
   }
 
-  generaDNI() {
-    return Math.floor(10000000 + Math.random() * 90000000);
+  generateID() {
+    this.id = Math.floor(Math.random() * 100000000);
+    return document.writeln(`<h3 class="text-primary">Id generated randomly :${this.id}</h3>`);
   }
 }
 
 
-Persona.mostrarGeneracion;
+const newPerson = new Person('German', 35,'37444555' , 'Male', '1.65m', '63kg', 1989);
 
 
+newPerson.showGeneration();
+newPerson.showData();
+newPerson.isOfLegalAge();
+newPerson.generateID();
