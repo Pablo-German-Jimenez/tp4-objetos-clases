@@ -2,18 +2,18 @@
  */
 class Rectangles {
   constructor(heigth, width) {
-    this._heigth = heigth;
-    this._width = width;
+    this.heigth = heigth;
+    this.width = width;
   }
   perimeter() {
-    const resultPerimeter = this._heigth * 2 + this._width * 2;
+    const resultPerimeter = this.heigth * 2 + this.width * 2;
     console.log(
-      `The rectangle has a height of: ${this._heigth} and width of: ${this._width},and has a perimeter of ${resultPerimeter}`
+      `The rectangle has a height of: ${this.heigth} and width of: ${this.width},and has a perimeter of ${resultPerimeter}`
     );
   }
 
   area() {
-    const resultArea = this._heigth * this._width;
+    const resultArea = this.heigth * this.width;
     return `The area of the rectangle is the multiply of they, and is equal of: ${resultArea}`;
   }
 }
