@@ -16,13 +16,13 @@ Los métodos de la agenda serán los siguientes:
 ⦁	huecosLibres(): indica cuántos contactos más podemos ingresar.
 
 Crea un menú con opciones que serán seleccionadas por el usuario usando un prompt, las salidas de las operaciones seleccionadas por el usuario se pueden mostrar en pantalla y  por consola.
-*/
 
-class Contact{    #name ; #phone;
+
+class Contact{
+    #name ; #phone;
     constructor(name, phone){
-        this.name = name;
-        this.phone = phone;
-
+        this.#name = name;
+        this.#phone = phone;
         
     isEqual(otherContact){
          if (this.name.toLowerCase()===otherContact.this.name.toLowerCase()) {
@@ -36,8 +36,8 @@ class Schedule{
         this.size = size;
         this.contacts = [];
     }
-    get getName(){return this.#name}
-    get getPhone(){return this.#phone}
+    get getName(){return this.name}
+    get getPhone(){return this.phone}
 
     set setName(newName){return  this.name = newName}
     set setNumberPhone(newPhoneNumber){ return this.phone = newPhoneNumber}
@@ -54,31 +54,29 @@ class Schedule{
        console.log(`Contact added`);
     }
 
-    contactExiste(){
+    contactExist(){
      if(this.contactExist(contact)){
             alert(`The contact exist`);
             console.log(`The contact exist`);
             return
         };
 }
-    }
+    
     listContact(){
             if(this.contacts.length ===0){
             alert(`Empty Schedule`);
             console.log(`Empty Schedule`);
             }else{
             console.log(`Contact in the schedule`)
-            this.contacts.forEach(c => console.log()
-                       
-                    };
+            this.contacts.forEach(c => console.log())
+                                    };
                 }
-            }
-    searchContact(){}
-    deleteContact(){}
-    fullSchedule(){}
-    freeSpaces(){}
 }
- 
+            
+  
+
+Contact.contactExist
+ */
 
 
 

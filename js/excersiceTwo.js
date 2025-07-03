@@ -29,19 +29,20 @@ cuenta.ingresar(500);
 console.log(cuenta.informar()); // Muestra: Titular: Alex, Saldo: $500
 cuenta.extraer(150);
 console.log(cuenta.informar()); // Muestra: Titular: Alex, Saldo: $350*/
-const saldo = document.querySelector('.saldo');
+
 const cantidad = [];
 
 const account = {
     Titulo: 'Alex',
     saldo: 0,
     ingresar: function(cantidad){
+        const saldo = document.querySelector('.saldo');
         cantidad = parseInt(prompt(`cuanto depositar?`))
         console.log((typeof(cantidad)))
         if(!isNaN(cantidad)){
         this.saldo =+ this.saldo+cantidad;
         saldo.innerHTML = ` Su saldo es: ${this.saldo}`
-        }
+        };
     },
     extraer: function(cantidad){
         cantidad = parseInt(prompt(`Cuanto dinero quieres extraer?`))
