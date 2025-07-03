@@ -18,3 +18,34 @@ Los métodos de la agenda serán los siguientes:
 Crea un menú con opciones que serán seleccionadas por el usuario usando un prompt, las salidas de las operaciones seleccionadas por el usuario se pueden mostrar en pantalla y  por consola.
 */
 
+class Schedule{
+    #name ; #numberPhone
+    constructor(name, numberPhone){
+        this.name = name;
+        this.numberPhone = numberPhone;
+    }
+    get getName(){return this.#name}
+    get getNumberPhone(){return this.#numberPhone}
+
+    set setName(newName){return  this.#name = newName}
+    set setNumberPhone(newPhoneNumber){ return this.#numberPhone = newPhoneNumber}
+
+    isEqual(otherContact){
+         if (this.name.toLowerCase()===otherContact.this.name.toLowerCase()) {
+          document.writeln(`The contact ${this.name} if equal to ${otherContact}`)}
+    }
+    addContact(){
+
+    }
+    contactExiste(){}
+    scheduleList(){}
+    searchContact(){}
+    deleteContact(){}
+    fullSchedule(){}
+    freeSpaces(){}
+}
+ 
+
+
+
+
