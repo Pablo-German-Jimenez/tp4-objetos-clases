@@ -18,27 +18,61 @@ Los métodos de la agenda serán los siguientes:
 Crea un menú con opciones que serán seleccionadas por el usuario usando un prompt, las salidas de las operaciones seleccionadas por el usuario se pueden mostrar en pantalla y  por consola.
 */
 
-class Schedule{
-    #name ; #numberPhone
-    constructor(name, numberPhone){
+class Contact{    #name ; #phone;
+    constructor(name, phone){
         this.name = name;
-        this.numberPhone = numberPhone;
-    }
-    get getName(){return this.#name}
-    get getNumberPhone(){return this.#numberPhone}
+        this.phone = phone;
 
-    set setName(newName){return  this.#name = newName}
-    set setNumberPhone(newPhoneNumber){ return this.#numberPhone = newPhoneNumber}
-
+        
     isEqual(otherContact){
          if (this.name.toLowerCase()===otherContact.this.name.toLowerCase()) {
           document.writeln(`The contact ${this.name} if equal to ${otherContact}`)}
     }
-    addContact(){
-
     }
-    contactExiste(){}
-    scheduleList(){}
+}
+
+class Schedule{
+        constructor(size=10){
+        this.size = size;
+        this.contacts = [];
+    }
+    get getName(){return this.#name}
+    get getPhone(){return this.#phone}
+
+    set setName(newName){return  this.name = newName}
+    set setNumberPhone(newPhoneNumber){ return this.phone = newPhoneNumber}
+
+    addContact(contact){
+        if(this.isFull){
+            alert(`the schedule is full!`);
+            console.log(`the schedule is full!`);
+            return
+        }
+   
+       this.contactExist.push(contact);
+       alert(`Contact added`);
+       console.log(`Contact added`);
+    }
+
+    contactExiste(){
+     if(this.contactExist(contact)){
+            alert(`The contact exist`);
+            console.log(`The contact exist`);
+            return
+        };
+}
+    }
+    listContact(){
+            if(this.contacts.length ===0){
+            alert(`Empty Schedule`);
+            console.log(`Empty Schedule`);
+            }else{
+            console.log(`Contact in the schedule`)
+            this.contacts.forEach(c => console.log()
+                       
+                    };
+                }
+            }
     searchContact(){}
     deleteContact(){}
     fullSchedule(){}
