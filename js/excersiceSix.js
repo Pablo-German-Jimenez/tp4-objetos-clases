@@ -32,13 +32,37 @@ class Book{
     set setPageNumber(newPageNumber){ return this.#pageNumber = newPageNumber}
 
     showBook(){
-        document.writeln(`<p>The Book ${this.title}, with ISBN:${this.#ISBN}, created by the author ${this.author}, and has<b>${this.pageNumber}</b> pages </p>`)
+        document.writeln(`<p class="text-success">The Book <b>"${this.title}"</b>, with ISBN: <b>"${this.ISBN}"</b>, created by the author <b>"${this.author}"</b>, and has: <b>"${this.pageNumber}"</b> pages </p>`)
     }
 }
 
 class TheAlquimist extends Book{
-    constructor(ISBN,title,author,pageNumber){}
+    constructor(ISBN,title,author,pageNumber){
+        super(ISBN,title,author,pageNumber)
+            this.getIsbn = ISBN;
+            this.gettitle = newTitle;
+            this.getAuthor= newAuthor;
+            this.getNumber = newPageNumber;
+        }
+  }
+
+const bookTheAlquimist = new Book('9','The Alquimist','Paulo Coehlo','190')
+const TheSecret = new Book('8','The Secret:The Law Atraction','Rhonda Byrne','261')
+
+
+bookTheAlquimist.showBook()
+TheSecret.showBook()
+
+const pagesAlquimist = parseInt(bookTheAlquimist.pageNumber);
+const pagesSecret = parseInt(TheSecret.pageNumber);
+
+if (pagesAlquimist > pagesSecret) {
+  document.writeln(`<p class="text-danger">"${bookTheAlquimist.title}" has more pages (${pagesAlquimist}) than "${TheSecret.title}" (${pagesSecret}).</p>`);
+} else if (pagesSecret > pagesAlquimist) {
+  document.writeln(`<p class="text-danger">"${TheSecret.title}" has more pages (${pagesSecret}) than "${bookTheAlquimist.title}" (${pagesAlquimist}).</p>`);
+} else {
+  document.writeln(`<p class="text-danger">Both books have the same number of pages: ${pagesAlquimist}.</p>`);
 }
 
 
-console.log(Book.gettitle)
+
