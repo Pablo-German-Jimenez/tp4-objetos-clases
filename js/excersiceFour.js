@@ -5,17 +5,16 @@ Por último, utilice el método imprime datos para mostrar por pantalla los valo
 
 class Product{
     constructor(codigo,nombre,precio){
-        this._codigo = codigo;
-        this._nombre = nombre;
-        this._precio = precio;
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.precio = precio;
     }
 
     printData(){
-        console.log(`Código: ${this._codigo}, nombre del producto: ${this._nombre}, precio: ${this._precio}`);
+        console.log(`Código: ${this.codigo}, nombre del producto: ${this.nombre}, precio: ${this.precio}`);
     }
 };
 const arrayObjets = [];
-
 const productOne = new Product(66601,'Bitcoin Miner','$15000');
 arrayObjets.push(productOne);
 console.log(arrayObjets)
