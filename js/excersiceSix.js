@@ -32,7 +32,7 @@ class Book{
     set setPageNumber(newPageNumber){ return this.#pageNumber = newPageNumber}
 
     showBook(){
-        console.log(`<p class="text-success">The Book <b>"${this.title}"</b>, with ISBN: <b>"${this.ISBN}"</b>, created by the author <b>"${this.author}"</b>, and has: <b>"${this.pageNumber}"</b> pages </p>`)
+        document.writeln(`<p class="text-success">The Book <b>"${this.title}"</b>, with ISBN: <b>"${this.ISBN}"</b>, created by the author <b>"${this.author}"</b>, and has: <b>"${this.pageNumber}"</b> pages </p>`)
     }
 }
 
