@@ -34,7 +34,7 @@ class Contact{
 class Schedule{
     #size;#name;#phone;#contact
         constructor(size=10,name,phone,contact){
-        this.size = size;
+        this.#size = size;
         this.#name = OneName;
         this.#phone = OneNumber;
         this.#contact = [];
