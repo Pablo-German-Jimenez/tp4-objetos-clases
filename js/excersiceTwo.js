@@ -7,61 +7,34 @@
 
 Utiliza este objeto para mostrar la descripción, ingresar y extraer dinero y volver a mostrar la descripción del estado de la cuenta.
 
-Rectángulos*/
+*/
+const amounts = [];
 
-/*const cuenta = {
-    titular: "Alex",
-    saldo: 0,
-    ingresar(cantidad) {
-        this.saldo += cantidad;
+const account = {
+    title: 'Alex',
+    balance: 0,
+    deposit: function(amount) {
+        const balanceElement = document.querySelector('.balance');
+        amount = parseInt(prompt(`How much would you like to deposit?`));
+        console.log(typeof amount);
+        if (!isNaN(amount)) {
+            this.balance += amount;
+            balanceElement.innerHTML = `Your balance is: ${this.balance}`;
+        }
     },
-    extraer(cantidad) {
-        this.saldo -= cantidad;
+    withdraw: function(amount) {
+        amount = parseInt(prompt(`How much money do you want to withdraw?`));
+        this.balance -= amount;
+        console.log(`The current balance is ${this.balance}`);
     },
-    informar() {
-        document.writeln( `Titular: ${this.titular}, Saldo: $${this.saldo}`);
+    report: function() {
+        alert(`The total value is ${this.balance}`);
     }
 };
 
-// Uso del objeto
-console.log(cuenta.informar()); // Muestra: Titular: Alex, Saldo: $0
-cuenta.ingresar(500);
-console.log(cuenta.informar()); // Muestra: Titular: Alex, Saldo: $500
-cuenta.extraer(150);
-console.log(cuenta.informar()); // Muestra: Titular: Alex, Saldo: $350*/
+do {
+    account.deposit();
+} while (confirm(`Add more numbers?`));
 
-const cantidad = [];
-
-const account = {
-    Titulo: 'Alex',
-    saldo: 0,
-    ingresar: function(cantidad){
-        const saldo = document.querySelector('.saldo');
-        cantidad = parseInt(prompt(`cuanto depositar?`))
-        console.log((typeof(cantidad)))
-        if(!isNaN(cantidad)){
-        this.saldo =+ this.saldo+cantidad;
-        saldo.innerHTML = ` Su saldo es: ${this.saldo}`
-        };
-    },
-    extraer: function(cantidad){
-        cantidad = parseInt(prompt(`Cuanto dinero quieres extraer?`))
-        this.saldo= this.saldo-cantidad
-        console.log(`El importe actual de tu saldo es de ${this.saldo}`)
-
-    },
-    informar: function(cantidad){
-        alert(`EL valor total es de ${this.cantidad}`)
-
-
-    },
-}
-
-
-do{
-account.ingresar()
-}while(confirm(`Add more numbers?`))
-
-account.extraer()
-
-account.informar()
+account.withdraw();
+account.report();
