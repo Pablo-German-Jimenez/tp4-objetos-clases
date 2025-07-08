@@ -16,36 +16,44 @@ Los métodos de la agenda serán los siguientes:
 ⦁	huecosLibres(): indica cuántos contactos más podemos ingresar.
 
 Crea un menú con opciones que serán seleccionadas por el usuario usando un prompt, las salidas de las operaciones seleccionadas por el usuario se pueden mostrar en pantalla y  por consola.
-
+*/
 
 class Contact{
-    #name ; #phone;
+    #name ; #phone
     constructor(name, phone){
         this.#name = name;
         this.#phone = phone;
-        
+    }
     isEqual(otherContact){
          if (this.name.toLowerCase()===otherContact.this.name.toLowerCase()) {
-          document.writeln(`The contact ${this.name} if equal to ${otherContact}`)}
+          document.writeln(`The contact ${this.#name} if equal to ${otherContact}`)}
     }
-    }
+    
 }
 
 class Schedule{
-        constructor(size=10){
-        this.size = size;
-        this.contacts = [];
-    }
-    get getName(){return this.name}
-    get getPhone(){return this.phone}
+    #size;#name;#phone;#contact
+        constructor(size=10,name,phone,contact){
+        this.#size = size;
+        this.#name = OneName;
+        this.#phone = OneNumber;
+        this.#contact = [];
 
-    set setName(newName){return  this.name = newName}
-    set setNumberPhone(newPhoneNumber){ return this.phone = newPhoneNumber}
+    }
+    get sizeTen(){return this.#size}
+    get getName(){return this.#name}
+    get getPhone(){return this.#phone}
+    get getContact(){return this.#contact}
+
+    set sizeTen(sizeTen){ return this.#size=sizeTen}
+    set setName(newName){return  this.#name = newName}
+    set setPhone(newPhone){ return this.#phone = newPhone}
+    set setContact(newContact){ return this.#contact = newContact}
 
     addContact(contact){
-        if(this.isFull){
-            alert(`the schedule is full!`);
-            console.log(`the schedule is full!`);
+        if(this.contact > 1){
+                alert(`the schedule is full bro!`);
+            console.log(`the schedule is full crack!`);
             return
         }
    
@@ -54,7 +62,7 @@ class Schedule{
        console.log(`Contact added`);
     }
 
-    contactExist(){
+    contactExist(contact){
      if(this.contactExist(contact)){
             alert(`The contact exist`);
             console.log(`The contact exist`);
@@ -62,8 +70,8 @@ class Schedule{
         };
 }
     
-    listContact(){
-            if(this.contacts.length ===0){
+    listContact(contact){
+            if(this.contact.length ===0){
             alert(`Empty Schedule`);
             console.log(`Empty Schedule`);
             }else{
@@ -72,12 +80,16 @@ class Schedule{
                                     };
                 }
 }
-            
+
+    const contact = prompt(`how many contact do you want to add?`)
+
+const firstContact = new Schedule('BBoy LiLKing','156132123',contact)
+
   
+firstContact.addContact
+  
+firstContact.addContact.parseInt()
 
-Contact.contactExist
- */
-
-
+ 
 
 
