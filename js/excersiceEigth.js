@@ -16,11 +16,11 @@ class Persona{
     set seTAge(setAge){return this.#age = setAge}
     set seTProfession(setProfession){return this.#profession = setProfession}
 
-    greeting(name){
+    greeting(){
         console.log(`${this.getName} is greeting you! bonjour !`)
     }
 
-    sayGoobBye(name){
+    sayGoobBye(){
         console.log(`${this.getName} is leaving and waving !`)
     }
 
